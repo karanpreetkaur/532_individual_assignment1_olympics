@@ -1,1 +1,1 @@
-web: gunicorn dsci532-2022-ia1-karanpreet:server
+web: gunicorn app:server
