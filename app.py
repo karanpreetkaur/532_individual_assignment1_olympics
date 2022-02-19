@@ -29,7 +29,7 @@ def plot_altair(year):
     colors = ['#d95f0e', '#fec44f', 'silver']
 
     bars = alt.Chart(olympic[olympic['Year'] == year], title="Medal Distribution by Gender in Olympics after 2000's").encode(x=alt.X('Sex', title= 'Gender'),
-                                 y=alt.Y('count(Medal)', title='Count of medals won'),
+                                 y=alt.Y('count(Medal)', title=f'Olympic Medals won in year {year}'),
                                  color = alt.Color('Medal', scale=alt.Scale(range=colors))).mark_bar()
 
     text = bars.mark_text(
